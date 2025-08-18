@@ -11,4 +11,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    port: 3000,
+    strictPort: false, // automatically try next port if 3000 is busy
+    open: true, // automatically open browser
+  },
 })

@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.jsx'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion.jsx'
-import { AlertTriangle, Shield, Search, MapPin, DollarSign, Clock, Users, CreditCard, CheckCircle, XCircle } from 'lucide-react'
+import { AlertTriangle, Shield, Search, MapPin, DollarSign, Clock, Users, CreditCard, CheckCircle, XCircle, LucideTractor } from 'lucide-react'
 import './App.css'
 
 function App() {
@@ -355,7 +355,7 @@ function App() {
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-red-600" />
-                  <span className="text-lg font-semibold">Geographic Risk</span>
+                  <span className="text-lg font-semibold">Geographic Risk Scenarios</span>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pt-4">
@@ -366,6 +366,14 @@ function App() {
                   </TabsList>
                   <TabsContent value="ip-location" className="space-y-4">
                     <p className="text-slate-600">Triggered when transactions are executed from sanctioned or restricted countries</p>
+                    <div>
+                    <h4 className="font-semibold text-slate-900 mb-3">Review Process:</h4>
+                    <ol className="space-y-2 text-slate-600">
+                      <li>1. Identify the high-risk jurisdiction where the transaction was executed</li>
+                      <li>2. Analyze transaction frecuency and patterns from that location</li>
+                      <li>3. Examine timing and duration of activity from the hih-risk area</li>
+                    </ol>
+                    </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <Card className="border-red-200 bg-red-50">
                         <CardHeader>
@@ -394,6 +402,15 @@ function App() {
                   </TabsContent>
                   <TabsContent value="country-mention" className="space-y-4">
                     <p className="text-slate-600">Triggered when high-risk or sanctioned country names appear in transaction data</p>
+                    <div>
+                    <h4 className="font-semibold text-slate-900 mb-3">Review Process:</h4>
+                    <ol className="space-y-2 text-slate-600">
+                      <li>1. Identify which country name(s) triggerend the Alert</li>
+                      <li>2. Examine the exact context where the country name appears</li>
+                      <li>3. Determine if the mention indicates intent to send/receive money from/to that country</li>
+                      <li>4. Assess whether the mention is transactional or conversational</li>
+                    </ol>
+                  </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <Card className="border-red-200 bg-red-50">
                         <CardHeader>
@@ -530,7 +547,7 @@ function App() {
                     <CardTitle className="text-red-800">⚠️ Critical Alert</CardTitle>
                   </CardHeader>
                   <CardContent className="text-red-700">
-                    <p className="font-semibold mb-2">All blacklist scenarios should be escalated as red flags regardless of:</p>
+                    <p className="font-semibold mb-2">All blacklist scenarios should be escalated to compliance regardless of:</p>
                     <ul className="space-y-1">
                       <li>• Transaction amount (small or large)</li>
                       <li>• Customer's historical activity patterns</li>
@@ -547,12 +564,12 @@ function App() {
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-3">
                   <CreditCard className="h-5 w-5 text-purple-600" />
-                  <span className="text-lg font-semibold">Card Transaction Scenarios</span>
+                  <span className="text-lg font-semibold">Alerted Card Transactions</span>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pt-4">
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-3">Review Process:</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Aditional Considerations for Alerted Card Transactions:</h4>
                   <ol className="space-y-2 text-slate-600">
                     <li>1. Consider the nature of the client's business</li>
                     <li>2. Examine card transaction details (merchant, location, amount, timing)</li>
@@ -565,7 +582,37 @@ function App() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+           <Card className="mt-8">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <LucideTractor className="h-6 w-6 text-yellow-600" />
+                Additional Tools and Resources
+              </CardTitle>
+            </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    Bridge
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    Interct E-Transfer Online Administration System
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    API Support Team
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    Public Search Engines
+                  </li>
+                </ul>
+          </CardContent>
+          </Card>       
+          
         </div>
+        
       </section>
 
       {/* Alert Disposition Section */}
@@ -656,15 +703,7 @@ function App() {
                     </Card>
                   </div>
                 </div>
-
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-900 mb-2">Additional Considerations:</h4>
-                  <ul className="space-y-1 text-sm text-blue-800">
-                    <li>• Ensure all required fields are completed before saving</li>
-                    <li>• Attach relevant documentation or notes if necessary</li>
-                    <li>• Once disposed, the alert status will update in the system</li>
-                  </ul>
-                </div>
+                
               </div>
             </CardContent>
           </Card>
