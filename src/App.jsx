@@ -597,7 +597,7 @@ function App() {
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                    Interct E-Transfer Online Administration System
+                    Interact E-Transfer Online Administration System
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
@@ -670,7 +670,7 @@ function App() {
                       <CardHeader className="pb-3">
                         <CardTitle className="text-green-800 text-base flex items-center gap-2">
                           <CheckCircle className="h-4 w-4" />
-                          Not Suspicious
+                          Not Suspicious (109)
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="text-sm text-green-700">
@@ -682,7 +682,7 @@ function App() {
                       <CardHeader className="pb-3">
                         <CardTitle className="text-orange-800 text-base flex items-center gap-2">
                           <AlertTriangle className="h-4 w-4" />
-                          Escalate to Compliance
+                          Escalate to Compliance (110)
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="text-sm text-orange-700">
@@ -698,7 +698,7 @@ function App() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="text-sm text-slate-700">
-                        Use to request clarification about transactions or customer details from the client
+                        Use this to request clarification from the client about transactions or customer details before determining the appropriate disposition of the alert.
                       </CardContent>
                     </Card>
                   </div>
